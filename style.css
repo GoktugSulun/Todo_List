@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Colors */
+/* Colors */
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #384152;
+}
+body .container {
+  max-width: 1000px;
+  min-width: 400px;
+  width: 600px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+body .container__addToDo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+body .container__addToDo h1 {
+  color: #fff;
+  text-align: center;
+}
+body .container__inputArea {
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+body .container__inputArea label {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  height: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 400ms;
+}
+body .container__inputArea label.active {
+  background-image: linear-gradient(to bottom, #384152 50%, #20283a 50%);
+  top: 0px;
+  color: rgba(255, 255, 255, 0.8);
+  left: 20px;
+}
+body .container__inputArea input {
+  flex: 4;
+  outline: none;
+  border: none;
+  background-color: #20283a;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px 35px;
+}
+body .container__inputArea input::-moz-placeholder {
+  transform: scale(0);
+  -moz-transition: all 400ms;
+  transition: all 400ms;
+}
+body .container__inputArea input:-ms-input-placeholder {
+  transform: scale(0);
+  -ms-transition: all 400ms;
+  transition: all 400ms;
+}
+body .container__inputArea input::placeholder {
+  transform: scale(0);
+  transition: all 400ms;
+}
+body .container__inputArea input:focus::-moz-placeholder {
+  transform: scale(1);
+}
+body .container__inputArea input:focus:-ms-input-placeholder {
+  transform: scale(1);
+}
+body .container__inputArea input:focus::placeholder {
+  transform: scale(1);
+}
+body .container__inputArea .btn {
+  flex: 1;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  background-color: #20283a;
+  transition: transform 300ms;
+  cursor: pointer;
+  font-weight: bold;
+}
+body .container__inputArea .btn:hover {
+  transform: scale(0.9);
+}
+body .container__todos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 400px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 20px;
+}
+body .container__todos .todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111827;
+  padding: 15px;
+  border-radius: 15px;
+  gap: 50px;
+  transition: all 300ms;
+}
+body .container__todos .todo:hover {
+  transform: scale(1.05);
+}
+body .container__todos .todo__left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+  cursor: pointer;
+}
+body .container__todos .todo__left.active .todo__name {
+  color: #a75478;
+}
+body .container__todos .todo__name {
+  display: none;
+  color: #fff;
+}
+body .container__todos .todo__name.active {
+  display: block;
+}
+body .container__todos .todo__edit-input {
+  display: none;
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: aliceblue;
+}
+body .container__todos .todo__edit-input.active {
+  display: block;
+}
+body .container__todos .todo__checkbox {
+  accent-color: pink;
+}
+body .container__todos .todo__right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+body .container__todos .todo__btn {
+  padding: 5px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 50%;
+  transition: transform 300ms;
+}
+body .container__todos .todo__btn:hover {
+  transform: scale(1.2);
+}
+body .container__todos .todo__btn:active {
+  -webkit-animation: click 500ms ease-in 1;
+          animation: click 500ms ease-in 1;
+}
+
+.container__todos::-webkit-scrollbar {
+  width: 11px;
+}
+
+.container__todos {
+  scrollbar-width: thin;
+  scrollbar-color: #111827 #111827;
+}
+
+.container__todos::-webkit-scrollbar-track {
+  background: #111827;
+}
+
+.container__todos::-webkit-scrollbar-thumb {
+  background-color: #384152;
+  border-radius: 6px;
+  border: 3px solid #111827;
+}
+
+@-webkit-keyframes click {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes click {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}/*# sourceMappingURL=style.css.map */
